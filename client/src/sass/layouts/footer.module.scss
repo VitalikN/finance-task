@@ -1,0 +1,24 @@
+@import "../utils/container";
+
+.footer__section {
+  display: flex;
+  align-items: center;
+  height: 62px;
+  border-top: 1px solid var(--color-border);
+  background: var(--background);
+}
+.footer__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--color-title);
+}
+.footer__text {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__link {
+  padding-left: 10px;
+}

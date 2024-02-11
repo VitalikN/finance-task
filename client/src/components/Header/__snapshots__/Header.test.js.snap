@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> component should match snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="container header__container"
+    >
+      <img
+        alt="incode logo"
+        class="logo"
+        src="/favicon.ico"
+        width="50"
+      />
+      <h2
+        class="title"
+      >
+        Finance
+      </h2>
+    </div>
+  </header>
+</div>
+`;
