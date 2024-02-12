@@ -4,7 +4,8 @@ import TickerRow from "../TickerRow/TickerRow";
 import styles from "../../sass/layouts/ticker.module.scss";
 
 const Ticker = ({
-  actualTickers,
+  data,
+  trigger,
   handleTrackTicker,
   companies,
   titleItems,
@@ -12,14 +13,19 @@ const Ticker = ({
 }) => {
   return (
     <section>
-      <h1 className={styles.title}>Stock Exchange</h1>
+      {trigger === "main" ? (
+        <h1 className={styles.title}>Stock Exchange</h1>
+      ) : (
+        <h2 className={styles.subject}>User Tracked Ticker</h2>
+      )}
+
       <div className={styles.ticker__container}>
         <table className={styles.table}>
           <thead>
             <tr className={styles.table__heading}>{titleItems}</tr>
           </thead>
           <tbody>
-            {actualTickers.map((tickerData, index) => (
+            {data.map((tickerData, index) => (
               <TickerRow
                 key={index}
                 data={tickerData}
@@ -37,7 +43,7 @@ const Ticker = ({
 export default Ticker;
 
 Ticker.propTypes = {
-  actualTickers: PropTypes.array.isRequired,
+  actualTickers: PropTypes.array,
   handleTrackTicker: PropTypes.func.isRequired,
   companies: PropTypes.object.isRequired,
   titleItems: PropTypes.node.isRequired,

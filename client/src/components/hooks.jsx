@@ -66,9 +66,7 @@ export const useTickerLogic = () => {
   };
 };
 
-// export default useTickerLogic;
-
-export const useTickerRow = (data, companies, onTrackTicker, tracked) => {
+export const useTickerRow = (data, companies, tracked) => {
   const {
     ticker,
     price,
