@@ -43,8 +43,9 @@ const Ticker = ({
 export default Ticker;
 
 Ticker.propTypes = {
-  actualTickers: PropTypes.array,
-  handleTrackTicker: PropTypes.func.isRequired,
+  data: PropTypes.array,
+  trigger: PropTypes.string.isRequired,
+  handleTrackTicker: PropTypes.func,
   companies: PropTypes.object.isRequired,
   titleItems: PropTypes.node.isRequired,
   trackedTickers: PropTypes.array.isRequired,

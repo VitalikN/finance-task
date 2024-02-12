@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../../sass/layouts/header.module.scss";
 
 const Header = () => {

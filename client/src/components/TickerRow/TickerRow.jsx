@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import styles from "../../sass/layouts/ticker.module.scss";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { useTickerRow } from "../hooks";
+import styles from "../../sass/layouts/ticker.module.scss";
 
 const TickerRow = ({ data, companies, onTrackTicker, tracked }) => {
   const {
@@ -21,7 +21,7 @@ const TickerRow = ({ data, companies, onTrackTicker, tracked }) => {
       <td>{companies[ticker]}</td>
       <td>{ticker}</td>
       <td>{price}$</td>
-      <td>{change}</td>
+      <td>{change || ""}</td>
 
       <td className={changeClass}>
         {arrowSymbol} {change_percent} %
@@ -48,11 +48,11 @@ TickerRow.propTypes = {
   data: PropTypes.shape({
     ticker: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
-    change: PropTypes.string.isRequired,
-    change_percent: PropTypes.string.isRequired,
-    dividend: PropTypes.string.isRequired,
-    yield: PropTypes.string.isRequired,
-    last_trade_time: PropTypes.string.isRequired,
+    change: PropTypes.string,
+    change_percent: PropTypes.string,
+    dividend: PropTypes.string,
+    yield: PropTypes.string,
+    last_trade_time: PropTypes.string,
   }).isRequired,
   companies: PropTypes.object.isRequired,
   onTrackTicker: PropTypes.func.isRequired,

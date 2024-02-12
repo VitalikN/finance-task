@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import { useDispatch, useSelector } from "react-redux";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
+
 import { getTickers } from "../redux/ticker/actions";
 import {
   getTickersError,
